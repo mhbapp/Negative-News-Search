@@ -74,7 +74,7 @@ custom_kw = st.text_input(
 )
 
 col1, col2 = st.columns([1, 1])
-lookback_days = col1.slider("Look‑back period (years)", 1, 30)
+lookback_days = col1.slider("Look‑back period (days)", 1, 30)
 results_limit = col2.number_input("Max articles per entity", min_value=1, max_value=100, value=RESULTS_PER_QUERY)
 
 run_search = st.button("🔍 Run Search")
