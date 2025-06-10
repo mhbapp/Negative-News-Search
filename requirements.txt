@@ -1,0 +1,4 @@
+streamlit
+newsapi-python
+pandas
+python-dotenv         # optional, if you want to read the API key from .env
