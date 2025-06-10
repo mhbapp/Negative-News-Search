@@ -91,7 +91,7 @@ def build_query(entity: str, keywords: List[str]) -> str:
 
 def search_entity(entity: str, client: NewsApiClient, keywords: List[str]) -> List[Dict]:
     query = build_query(entity, keywords)
-    date_from = (datetime.utcnow() - timedelta(days=lookback_days * 1)).strftime("%Y-%m-%d")
+    date_from = (datetime.utcnow() - timedelta(days=lookback_days)).strftime("%Y-%m-%d")
 
     try:
         res = client.get_everything(
