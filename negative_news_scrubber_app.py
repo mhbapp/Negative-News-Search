@@ -45,7 +45,7 @@ DEFAULT_NEGATIVE_KEYWORDS: List[str] = [
 ]
 
 RESULTS_PER_QUERY = 25  # NewsAPI max is 100 per call; keep modest for speed
-DATE_RANGE_DAYS = 365 * 3  # look back three years by default
+DATE_RANGE_DAYS = 30  # look back three years by default
 
 ###############################################################################
 # UI LAYOUT
