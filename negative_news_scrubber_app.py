@@ -36,12 +36,17 @@ DEFAULT_NEGATIVE_KEYWORDS: List[str] = [
     "bbb f rating",
     "court filing",
     "fine",
-    "penalty"
-    "closed"
-    "shut down"
-    "out of business"
-    "stole"
+    "penalty",
+    "closed",
+    "shut down",
+    "out of business",
+    "stole",
     "not answering",
+    "0 stars",
+    "ghost",
+    "stole",
+    "police report",
+    "not what was promised"
 ]
 
 RESULTS_PER_QUERY = 25  # NewsAPI max is 100 per call; keep modest for speed
