@@ -50,7 +50,7 @@ DEFAULT_NEGATIVE_KEYWORDS: List[str] = [
 ]
 
 RESULTS_PER_QUERY = 25  # NewsAPI max is 100 per call; keep modest for speed
-DATE_RANGE_DAYS = 30  # look back three years by default
+DATE_RANGE_DAYS = 30  # look back thirty days by default
 
 ###############################################################################
 # UI LAYOUT
@@ -74,7 +74,7 @@ custom_kw = st.text_input(
 )
 
 col1, col2 = st.columns([1, 1])
-lookback_years = col1.slider("Look‑back period (years)", 1, 30)
+lookback_days = col1.slider("Look‑back period (years)", 1, 30)
 results_limit = col2.number_input("Max articles per entity", min_value=1, max_value=100, value=RESULTS_PER_QUERY)
 
 run_search = st.button("🔍 Run Search")
@@ -91,7 +91,7 @@ def build_query(entity: str, keywords: List[str]) -> str:
 
 def search_entity(entity: str, client: NewsApiClient, keywords: List[str]) -> List[Dict]:
     query = build_query(entity, keywords)
-    date_from = (datetime.utcnow() - timedelta(days=lookback_years * 1)).strftime("%Y-%m-%d")
+    date_from = (datetime.utcnow() - timedelta(days=lookback_days * 1)).strftime("%Y-%m-%d")
 
     try:
         res = client.get_everything(
