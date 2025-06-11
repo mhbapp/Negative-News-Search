@@ -51,7 +51,9 @@ DEFAULT_NEGATIVE_KEYWORDS: List[str] = [
     "small claims court",
     "no refund",
     "unable to reschedule",
-    "cancel at last minute"
+    "cancel at last minute",
+    "legal trouble",
+    "unethical"
 ]
 
 RESULTS_PER_QUERY = 25  # NewsAPI max is 100 per call; keep modest for speed
