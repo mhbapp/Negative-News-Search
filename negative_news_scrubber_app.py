@@ -46,7 +46,12 @@ DEFAULT_NEGATIVE_KEYWORDS: List[str] = [
     "ghost",
     "stole",
     "police report",
-    "not what was promised"
+    "not what was promised",
+    "stopped responding",
+    "small claims court",
+    "no refund",
+    "unable to reschedule",
+    "cancel at last minute"
 ]
 
 RESULTS_PER_QUERY = 25  # NewsAPI max is 100 per call; keep modest for speed
